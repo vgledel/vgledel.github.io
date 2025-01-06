@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;900');
+
+body {
+  background: white;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  font-size: 14pt;
+}
+
+/***
+  *** misc settings
+  ***/
+pre, code, kbd, samp, .monospace {
+  font-family: "Source Code Pro", monospace;
+}
+
+code {
+  border: dotted 1px #777;
+  padding: 0;
+}
+
+pre code  {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  border: solid 2px;
+  padding: 1em;
+}
+
+pre code.shell {
+  background-color: white;
+  color: black;
+  border: solid 1px;
+}
+
+ol>li {
+  margin: 10px 0px;
+}
+
+b {
+  font-weight: bold;
+}
+
+/* p + p { */
+/*   margin:0px 0px; */
+/* } */
+
+/*
+p {
+  margin: 10px 0px !important;
+}
+li > p:only-child {
+  margin:0px 10px;
+}
+*/
+
+table {
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+td,th {
+  padding: 10px;
+}
+
+
+dl {
+  margin: 0;
+  padding: 1ex;
+}
+
+dt {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 1ex 2em;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: underline dotted;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
+/***
+  *** Header section
+  ***/
+#header {
+  position: relative;
+  margin: 40px;
+  border: 1px solid;
+  top: 0;
+  left: 0;
+  background: white;
+  color: black;
+  text-align: center;
+}
+
+#header #gopher {
+  position: fixed;
+  top: 50px;
+  right: 60px;
+  z-index: 1;
+}
+
+#header h1 {
+  padding: 5px ;
+  border: solid 2px;
+  display: inline-block;
+  width: auto;
+  margin: 20px 0;
+}
+
+#header h2 {
+  padding: 5px ;
+  text-align: center;
+}
+
+#header h3 {
+  padding: 5px ;
+  text-align: center;
+  font-weight: normal;
+}
+
+/***
+  *** table of content
+  ***/
+#toc {
+  margin: 40px;
+  padding: 10px;
+  border: 1px solid;
+  background: white;
+  color: black;
+}
+
+#toc p {
+  margin:2px 0px;
+}
+
+#toc li ul {
+  display: none;
+}
+
+
+/***
+  *** body section
+  ***/
+#main {
+  margin: 40px;
+  padding: 20px;
+  border: 1px solid;
+  counter-reset: aoccount;
+  background: white;
+  color: black;
+}
+
+#main h1 {
+  margin-top: 20px ;
+  margin-bottom: 10px ;
+  padding-right: 10px ;
+  padding-left: 20px ;
+  border-bottom: solid 2px ;
+}
+
+#main h2 {
+  margin-top: 20px ;
+  margin-bottom: 10px ;
+  padding-left: 30px ;
+  width: auto;
+  border-bottom: solid 1px ;
+}
+
+#main h3 {
+  margin-top: 20px ;
+  margin-bottom: 10px ;
+  padding-left: 40px ;
+  width: auto;
+  text-decoration: underline;
+}
+
+#main p {
+  margin:4px 0px;
+  line-height:1.3;
+}
+
+#main dt {
+  font-weight: bold;
+}
+
+
+
+#main .aoc:before {
+  font-weight: bold;
+  content: "Advent of code " counter(aoccount) ".";
+  counter-increment: aoccount;
+}
+#main .prelim:before {
+  font-weight: bold;
+  content: "Préliminaire.";
+}
+#main .aoc , .prelim {
+  background: white;
+  color: black;
+  padding: 10px;
+  margin: 30px 20px;
+  opacity: 95%;
+}
+
+#main .prelim {
+  border: 1px solid ;
+}
+
+#main .aoc {
+  border: 1px solid ;
+}
+
+#main .aoc table {
+  background: white;
+  color: black;
+}
+
+#main .aoc td,th {
+  padding: 1ex 4ex;
+}
+
+#main .aoc, .prelim, .remarque {
+  position: relative;
+  z-index: 2;
+}
+
+#main .remarque:before {
+  font-weight: bold;
+  content: "Remarque. ";
+}
+#main .remarque {
+  background: white;
+  padding: 15px;
+  border: 1px solid;
+  margin: 40px 90px;
+  opacity: 95%;
+}
+
+#main .TODO:before {
+  font-weight: bold;
+  color: black;
+  content: "TODO. ";
+}
+#main .TODO {
+  background: white;
+  color: black;
+  padding: 5px;
+  border: 2px solid;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#main .TODO {
+  padding: 5px;
+  border: 2px solid;
+  margin-left: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#main .cadre {
+  padding: 15px;
+  border: 1px solid;
+  margin: 40px 90px;
+}
+/***
+  *** footer
+  ***/
+#footer {
+  width: 50%;
+  font-size: 75%;
+  text-align: center;
+  border: 1px solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background: white;
+  color: black;
+}
+
+

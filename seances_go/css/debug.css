@@ -1,0 +1,15 @@
+pre {
+    border: green solid 2px;
+}
+
+p {
+    border: black solid 2px;
+}
+ul, ol, dl {
+    border: blue solid 2px;
+}
+
+blockquote {
+    background-color: lightgreen;
+}
+
